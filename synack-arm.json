@@ -31,7 +31,7 @@
     },
     "synackApiUrl": {
       "type": "string",
-      "defaultValue": "https://api.demo.synack.com",
+      "defaultValue": "https://api.synack.com",
       "metadata": {
         "description": "Synack API Url"
       }
