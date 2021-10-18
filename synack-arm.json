@@ -5,47 +5,33 @@
       "type": "string",
       "defaultValue": "Synack Workbook",
       "metadata": {
-        "description": "Synack Workbook."
-      }
-    },
-    "workbookType": {
-      "type": "string",
-      "defaultValue": "workbook",
-      "metadata": {
-        "description": "The gallery that the workbook will been shown under. Supported values include workbook, tsg, etc. Usually, this is 'workbook'"
-      }
-    },
-    "workbookSourceId": {
-      "type": "string",
-      "defaultValue": "Azure Security Center",
-      "metadata": {
-        "description": "The id of resource instance to which the workbook will be associated"
+        "description": "Human-readable name for your workbook."
       }
     },
     "workbookId": {
       "type": "string",
       "defaultValue": "[newGuid()]",
       "metadata": {
-        "description": "The unique guid for this workbook instance"
+        "description": "The unique guid for this workbook. Keep the default value [newGuid()] in this field and the guid will be generated automatically."
       }
     },
     "synackApiUrl": {
       "type": "string",
-      "defaultValue": "https://api.synack.com",
+      "defaultValue": "https://api.demo.synack.com",
       "metadata": {
-        "description": "Synack API Url"
+        "description": "Synack API Url. Set this to https://api.synack.com"
       }
     },
     "synackApiToken": {
       "type": "string",
       "defaultValue": "",
       "metadata": {
-        "description": "Synack API Token"
+        "description": "Synack API Token. Follow the instructions in the documentation to generate the token."
       }
     }
   },
   "variables": {
-    "serializedData": "{\"version\":\"Notebook/1.0\",\"items\":[{\"type\":3,\"content\":{\"version\":\"KqlItem/1.0\",\"query\":\"{\\\"version\\\":\\\"CustomEndpoint/1.0\\\",\\\"data\\\":null,\\\"headers\\\":[],\\\"method\\\":\\\"GET\\\",\\\"url\\\":\\\"https://645d-77-122-110-125.ngrok.io/api/azure_security_center/vulnerabilities\\\",\\\"contentType\\\":\\\"text/plain\\\",\\\"urlParams\\\":[{\\\"key\\\":\\\"url\\\",\\\"value\\\":\\\"\\\"},{\\\"key\\\":\\\"token\\\",\\\"value\\\":\\\"\\\"}],\\\"transformers\\\":[{\\\"type\\\":\\\"jsonpath\\\"}]}\",\"size\":3,\"title\":\"Vulnerabilities\",\"queryType\":10,\"gridSettings\":{\"formatters\":[{\"columnMatch\":\"count\",\"formatter\":5},{\"columnMatch\":\"Link\",\"formatter\":7,\"formatOptions\":{\"linkTarget\":\"Url\"}},{\"columnMatch\":\"Assessment\",\"formatter\":5}],\"hierarchySettings\":{\"treeType\":1,\"groupBy\":[\"Assessment\",\"Status\"]}}},\"name\":\"query - 0\"},{\"type\":3,\"content\":{\"version\":\"KqlItem/1.0\",\"query\":\"{\\\"version\\\":\\\"CustomEndpoint/1.0\\\",\\\"data\\\":null,\\\"headers\\\":[],\\\"method\\\":\\\"GET\\\",\\\"url\\\":\\\"https://645d-77-122-110-125.ngrok.io/api/azure_security_center/vulnerabilities\\\",\\\"contentType\\\":\\\"text/plain\\\",\\\"urlParams\\\":[{\\\"key\\\":\\\"url\\\",\\\"value\\\":\\\"\\\"},{\\\"key\\\":\\\"token\\\",\\\"value\\\":\\\"\\\"}],\\\"transformers\\\":[null]}\",\"size\":1,\"title\":\"By Status\",\"queryType\":10,\"visualization\":\"piechart\",\"gridSettings\":{\"formatters\":[{\"columnMatch\":\"count\",\"formatter\":5},{\"columnMatch\":\"Link\",\"formatter\":7,\"formatOptions\":{\"linkTarget\":\"Url\"}},{\"columnMatch\":\"Assessment\",\"formatter\":5}],\"hierarchySettings\":{\"treeType\":1,\"groupBy\":[\"Assessment\",\"Status\"]}},\"tileSettings\":{\"showBorder\":false,\"titleContent\":{\"columnMatch\":\"Synack Id\",\"formatter\":1},\"leftContent\":{\"columnMatch\":\"count\",\"formatter\":12,\"formatOptions\":{\"palette\":\"auto\"},\"numberFormat\":{\"unit\":17,\"options\":{\"maximumSignificantDigits\":3,\"maximumFractionDigits\":2}}}},\"graphSettings\":{\"type\":0,\"topContent\":{\"columnMatch\":\"Synack Id\",\"formatter\":1},\"centerContent\":{\"columnMatch\":\"count\",\"formatter\":1,\"numberFormat\":{\"unit\":17,\"options\":{\"maximumSignificantDigits\":3,\"maximumFractionDigits\":2}}}},\"chartSettings\":{\"yAxis\":[\"count\"],\"group\":\"Status\",\"createOtherGroup\":10},\"mapSettings\":{\"locInfo\":\"LatLong\",\"sizeSettings\":\"count\",\"sizeAggregation\":\"Sum\",\"legendMetric\":\"count\",\"legendAggregation\":\"Sum\",\"itemColorSettings\":{\"type\":\"heatmap\",\"colorAggregation\":\"Sum\",\"nodeColorField\":\"count\",\"heatmapPalette\":\"greenRed\"}}},\"name\":\"query - 0\"},{\"type\":3,\"content\":{\"version\":\"KqlItem/1.0\",\"query\":\"{\\\"version\\\":\\\"CustomEndpoint/1.0\\\",\\\"data\\\":null,\\\"headers\\\":[],\\\"method\\\":\\\"GET\\\",\\\"url\\\":\\\"https://645d-77-122-110-125.ngrok.io/api/azure_security_center/vulnerabilities\\\",\\\"contentType\\\":\\\"text/plain\\\",\\\"urlParams\\\":[{\\\"key\\\":\\\"url\\\",\\\"value\\\":\\\"\\\"},{\\\"key\\\":\\\"token\\\",\\\"value\\\":\\\"\\\"}],\\\"transformers\\\":[null]}\",\"size\":1,\"title\":\"By Assessment\",\"queryType\":10,\"visualization\":\"piechart\",\"gridSettings\":{\"formatters\":[{\"columnMatch\":\"count\",\"formatter\":5},{\"columnMatch\":\"Link\",\"formatter\":7,\"formatOptions\":{\"linkTarget\":\"Url\"}},{\"columnMatch\":\"Assessment\",\"formatter\":5}],\"hierarchySettings\":{\"treeType\":1,\"groupBy\":[\"Assessment\",\"Status\"]}},\"tileSettings\":{\"showBorder\":false,\"titleContent\":{\"columnMatch\":\"Synack Id\",\"formatter\":1},\"leftContent\":{\"columnMatch\":\"count\",\"formatter\":12,\"formatOptions\":{\"palette\":\"auto\"},\"numberFormat\":{\"unit\":17,\"options\":{\"maximumSignificantDigits\":3,\"maximumFractionDigits\":2}}}},\"graphSettings\":{\"type\":0,\"topContent\":{\"columnMatch\":\"Synack Id\",\"formatter\":1},\"centerContent\":{\"columnMatch\":\"count\",\"formatter\":1,\"numberFormat\":{\"unit\":17,\"options\":{\"maximumSignificantDigits\":3,\"maximumFractionDigits\":2}}}},\"chartSettings\":{\"yAxis\":[\"count\"],\"group\":\"Assessment\",\"createOtherGroup\":10},\"mapSettings\":{\"locInfo\":\"LatLong\",\"sizeSettings\":\"count\",\"sizeAggregation\":\"Sum\",\"legendMetric\":\"count\",\"legendAggregation\":\"Sum\",\"itemColorSettings\":{\"type\":\"heatmap\",\"colorAggregation\":\"Sum\",\"nodeColorField\":\"count\",\"heatmapPalette\":\"greenRed\"}}},\"name\":\"query - 0\"}],\"isLocked\":false,\"fallbackResourceIds\":[\"Azure Security Center\"]}",
+    "serializedData": "{\"version\":\"Notebook/1.0\",\"items\":[{\"type\":3,\"content\":{\"version\":\"KqlItem/1.0\",\"query\":\"{\\\"version\\\":\\\"CustomEndpoint/1.0\\\",\\\"data\\\":null,\\\"headers\\\":[],\\\"method\\\":\\\"GET\\\",\\\"url\\\":\\\"https://5098-77-122-110-125.ngrok.io/api/azure_security_center/vulnerabilities\\\",\\\"contentType\\\":\\\"text/plain\\\",\\\"urlParams\\\":[{\\\"key\\\":\\\"url\\\",\\\"value\\\":\\\"\\\"},{\\\"key\\\":\\\"token\\\",\\\"value\\\":\\\"\\\"}],\\\"transformers\\\":[{\\\"type\\\":\\\"jsonpath\\\"}]}\",\"size\":3,\"title\":\"Vulnerabilities\",\"queryType\":10,\"gridSettings\":{\"formatters\":[{\"columnMatch\":\"count\",\"formatter\":5},{\"columnMatch\":\"Link\",\"formatter\":7,\"formatOptions\":{\"linkTarget\":\"Url\"}},{\"columnMatch\":\"Assessment\",\"formatter\":5}],\"hierarchySettings\":{\"treeType\":1,\"groupBy\":[\"Assessment\",\"Status\"]}}},\"name\":\"query - 0\"},{\"type\":3,\"content\":{\"version\":\"KqlItem/1.0\",\"query\":\"{\\\"version\\\":\\\"CustomEndpoint/1.0\\\",\\\"data\\\":null,\\\"headers\\\":[],\\\"method\\\":\\\"GET\\\",\\\"url\\\":\\\"https://645d-77-122-110-125.ngrok.io/api/azure_security_center/vulnerabilities\\\",\\\"contentType\\\":\\\"text/plain\\\",\\\"urlParams\\\":[{\\\"key\\\":\\\"url\\\",\\\"value\\\":\\\"\\\"},{\\\"key\\\":\\\"token\\\",\\\"value\\\":\\\"\\\"}],\\\"transformers\\\":[null]}\",\"size\":1,\"title\":\"By Status\",\"queryType\":10,\"visualization\":\"piechart\",\"gridSettings\":{\"formatters\":[{\"columnMatch\":\"count\",\"formatter\":5},{\"columnMatch\":\"Link\",\"formatter\":7,\"formatOptions\":{\"linkTarget\":\"Url\"}},{\"columnMatch\":\"Assessment\",\"formatter\":5}],\"hierarchySettings\":{\"treeType\":1,\"groupBy\":[\"Assessment\",\"Status\"]}},\"tileSettings\":{\"showBorder\":false,\"titleContent\":{\"columnMatch\":\"Synack Id\",\"formatter\":1},\"leftContent\":{\"columnMatch\":\"count\",\"formatter\":12,\"formatOptions\":{\"palette\":\"auto\"},\"numberFormat\":{\"unit\":17,\"options\":{\"maximumSignificantDigits\":3,\"maximumFractionDigits\":2}}}},\"graphSettings\":{\"type\":0,\"topContent\":{\"columnMatch\":\"Synack Id\",\"formatter\":1},\"centerContent\":{\"columnMatch\":\"count\",\"formatter\":1,\"numberFormat\":{\"unit\":17,\"options\":{\"maximumSignificantDigits\":3,\"maximumFractionDigits\":2}}}},\"chartSettings\":{\"yAxis\":[\"count\"],\"group\":\"Status\",\"createOtherGroup\":10},\"mapSettings\":{\"locInfo\":\"LatLong\",\"sizeSettings\":\"count\",\"sizeAggregation\":\"Sum\",\"legendMetric\":\"count\",\"legendAggregation\":\"Sum\",\"itemColorSettings\":{\"type\":\"heatmap\",\"colorAggregation\":\"Sum\",\"nodeColorField\":\"count\",\"heatmapPalette\":\"greenRed\"}}},\"name\":\"query - 0\"},{\"type\":3,\"content\":{\"version\":\"KqlItem/1.0\",\"query\":\"{\\\"version\\\":\\\"CustomEndpoint/1.0\\\",\\\"data\\\":null,\\\"headers\\\":[],\\\"method\\\":\\\"GET\\\",\\\"url\\\":\\\"https://645d-77-122-110-125.ngrok.io/api/azure_security_center/vulnerabilities\\\",\\\"contentType\\\":\\\"text/plain\\\",\\\"urlParams\\\":[{\\\"key\\\":\\\"url\\\",\\\"value\\\":\\\"\\\"},{\\\"key\\\":\\\"token\\\",\\\"value\\\":\\\"\\\"}],\\\"transformers\\\":[null]}\",\"size\":1,\"title\":\"By Assessment\",\"queryType\":10,\"visualization\":\"piechart\",\"gridSettings\":{\"formatters\":[{\"columnMatch\":\"count\",\"formatter\":5},{\"columnMatch\":\"Link\",\"formatter\":7,\"formatOptions\":{\"linkTarget\":\"Url\"}},{\"columnMatch\":\"Assessment\",\"formatter\":5}],\"hierarchySettings\":{\"treeType\":1,\"groupBy\":[\"Assessment\",\"Status\"]}},\"tileSettings\":{\"showBorder\":false,\"titleContent\":{\"columnMatch\":\"Synack Id\",\"formatter\":1},\"leftContent\":{\"columnMatch\":\"count\",\"formatter\":12,\"formatOptions\":{\"palette\":\"auto\"},\"numberFormat\":{\"unit\":17,\"options\":{\"maximumSignificantDigits\":3,\"maximumFractionDigits\":2}}}},\"graphSettings\":{\"type\":0,\"topContent\":{\"columnMatch\":\"Synack Id\",\"formatter\":1},\"centerContent\":{\"columnMatch\":\"count\",\"formatter\":1,\"numberFormat\":{\"unit\":17,\"options\":{\"maximumSignificantDigits\":3,\"maximumFractionDigits\":2}}}},\"chartSettings\":{\"yAxis\":[\"count\"],\"group\":\"Assessment\",\"createOtherGroup\":10},\"mapSettings\":{\"locInfo\":\"LatLong\",\"sizeSettings\":\"count\",\"sizeAggregation\":\"Sum\",\"legendMetric\":\"count\",\"legendAggregation\":\"Sum\",\"itemColorSettings\":{\"type\":\"heatmap\",\"colorAggregation\":\"Sum\",\"nodeColorField\":\"count\",\"heatmapPalette\":\"greenRed\"}}},\"name\":\"query - 0\"}],\"isLocked\":false,\"fallbackResourceIds\":[\"Azure Security Center\"]}",
     "parsedData": "[json(variables('serializedData'))]",
     "synackApiUrl": "[parameters('synackApiUrl')]",
     "synackApiToken": "[parameters('synackApiToken')]",
@@ -65,7 +51,7 @@
     "updatedWorkbookData": {
       "version": "[variables('parsedData')['version']]",
       "items": "[variables('updatedItems')]",
-      "fallbackResourceIds": ["[parameters('workbookSourceId')]"]
+      "fallbackResourceIds": ["Azure Security Center"]
     },
     "reserializedData": "[string(variables('updatedWorkbookData'))]"
   },
@@ -81,8 +67,8 @@
         "displayName": "[parameters('workbookDisplayName')]",
         "serializedData": "[variables('reserializedData')]",
         "version": "1.0",
-        "sourceId": "[parameters('workbookSourceId')]",
-        "category": "[parameters('workbookType')]"
+        "sourceId": "Azure Security Center",
+        "category": "workbook"
       }
     }
   ],
